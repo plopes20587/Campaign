@@ -1,6 +1,6 @@
-@import "base/_base";
+@import "base/_base.scss";
+@import "layout/_splash.scss";
 
-body {
-  background-color: grey;
-  color: white;
+header {
+  font-size: 4em;
 }
