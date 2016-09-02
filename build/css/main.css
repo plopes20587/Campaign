@@ -165,13 +165,13 @@ body {
   background: #2ECC71;
   color: white; }
 
+body, html {
+  height: 100%; }
+
 body {
   margin: 0;
   padding: 0;
-  position: relative;
-  overflow-x: hidden;
   background: white;
-  top: 0;
   font-size: 100%;
   width: 100%; }
 
@@ -179,11 +179,24 @@ li {
   text-decoration: none;
   list-style: none; }
 
-.splash__header {
-  display: block;
-  width: 100%;
-  background-color: black;
-  height: 80px; }
-
-header {
-  font-size: 4em; }
+.splash {
+  background-image: url("../img/splash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .splash__header {
+    display: block;
+    width: 100%;
+    background-color: white;
+    height: 100px; }
+  .splash__logo {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; }
+    .splash__logo > img {
+      max-width: 100%; }
+  .splash__wrapper {
+    width: 100%; }
+  .splash__image {
+    max-width: 100%; }
