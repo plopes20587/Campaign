@@ -1,0 +1,22 @@
+{
+  "name": "campaign",
+  "version": "1.0.0",
+  "description": "Robert Downey Jr Presidential Campaign Website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Patrick Lopes",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.14.3",
+    "gulp": "^3.9.1",
+    "gulp-minify": "0.0.14",
+    "gulp-prettify": "^0.5.0",
+    "gulp-pug": "^3.0.4",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "normalize": "^0.3.1"
+  }
+}

@@ -1,0 +1,399 @@
+/* 
+    File: media.scss
+    Last Modified:22 April, 2016
+    www.pakvistatech.com
+*/ 
+
+
+//================================================================================= 
+//  MEDIA mixins
+//================================================================================= 
+@mixin viewport(){
+    @-webkit-viewport {@content;}
+    @-moz-viewport {@content;}
+    @-o-viewport {@content;}
+    @-ms-viewport {@content;}
+    @viewport {@content;}
+}
+
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transition-property($property...) {
+    -moz-transition-property: $property;
+    -o-transition-property: $property;
+    -webkit-transition-property: $property;
+    transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+    -moz-transition-property: $duration;
+    -o-transition-property: $duration;
+    -webkit-transition-property: $duration;
+    transition-property: $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function: $timing;
+    -o-transition-timing-function: $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay...) {
+    -moz-transition-delay: $delay;
+    -o-transition-delay: $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+@mixin transform($property) {
+    -ms-transform: $property;
+    /* IE 9 */
+    -webkit-transform: $property;
+    /* Chrome, Safari, Opera */
+    -moz-transform: $property;
+    /* Firefox */
+    -o-transform: $property;
+    transform: $property;
+}
+
+@mixin border-radius($property) {
+    -ms-border-radius: $property;
+    /* IE 9 */
+    -webkit-border-radius: $property;
+    /* Chrome, Safari, Opera */
+    -moz-border-radius: $property;
+    /* Firefox */
+    -o-border-radius: $property;
+    border-radius: $property;
+}
+
+@mixin box-shadow($property) {
+    -ms-box-shadow: $property;
+    /* IE 9 */
+    -webkit-box-shadow: $property;
+    /* Chrome, Safari, Opera */
+    -moz-box-shadow: $property;
+    /* Firefox */
+    -o-box-shadow: $property;
+    box-shadow: $property;
+}
+
+@mixin blur($property) {
+    -ms-filter: blur($property);
+    -webkit-filter: blur($property);
+    -moz-filter: blur($property);
+    -o-filter: blur($property);
+    filter: blur($property);
+}
+
+@mixin filter($prop)
+{
+    -webkit-filter: $prop;
+    -moz-filter: $prop;
+    -o-filter: $prop;
+    -ms-filter: $prop;
+    filter: $prop;
+}
+
+//================================================================================= 
+// SOME PRESETTINGS
+//================================================================================= 
+@include viewport{
+    width: device-width;
+    scale: 1.0;
+}
+html, body {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -o-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+//================================================================================= 
+// MEDIA QUERIES MOBILE FIRST
+//================================================================================= 
+$XXS:320px;
+$XS:480px;
+$SM:768px;
+$MD:992px;
+$LG:1200px;
+
+// exclusive for a specific screen size
+@mixin onOnly($scr1:0, $scr2:0,$scr3:0,$scr4:0,$scr5:0){
+    @if $scr1==$XXS or $scr2==$XXS or $scr3==$XXS or $scr4==$XXS  or $scr5==$XXS{
+        @media (min-width:$XXS) and (max-width:479px) {
+            @content;
+        }
+    }
+    @if $scr1==$XS or $scr2==$XS or $scr3==$XS or $scr4==$XS  or $scr5==$XS{
+        @media (min-width:$XS) and (max-width:767px) {
+            @content;
+        }
+    }
+    @if $scr1==$SM or $scr2==$SM or $scr3==$SM or $scr4==$SM  or $scr5==$SM{
+        @media (min-width:$SM) and (max-width:991px) {
+            @content;
+        }
+    }
+    @if $scr1==$MD or $scr2==$MD or $scr3==$MD or $scr4==$MD  or $scr5==$MD{
+        @media (min-width:$MD) and (max-width:1199px) {
+            @content;
+        }
+    }
+    @if $scr1==$LG or $scr2==$LG or $scr3==$LG or $scr4==$LG  or $scr5==$LG{
+        @media (min-width:$LG){
+            @content;
+        }
+    }
+}
+
+// for all popular screen sizes sync with bootstrap
+@mixin onXXS () {
+    @media  (min-width:$XXS) {
+        @content;
+    }
+}
+@mixin onXS () {
+    @media  (min-width:$XS) {
+        @content;
+    }
+}
+@mixin onSM () {
+    @media  (min-width: $SM){
+        @content;
+    }
+}
+@mixin onMD () {
+    @media  (min-width:$MD) {
+        @content;
+    }
+}
+@mixin onLG () {
+    @media  (min-width:$LG) {
+        @content;
+    }
+}
+
+// generic
+@mixin on($scr1:0,$scr2:0,$scr3:0,$scr4:0,$scr5:0){
+    @if($scr1!=0){
+        @media  (min-width:$scr1) {
+            @content;
+        }
+    }
+    
+    @if($scr2!=0){
+        @media  (min-width:$scr2) {
+            @content;
+        }
+    }
+    
+    @if($scr3!=0){
+        @media  (min-width:$scr3) {
+            @content;
+        }
+    }
+    
+    @if($scr4!=0){
+        @media  (min-width:$scr4) {
+            @content;
+        }
+    }
+    
+    @if($scr5!=0){
+        @media  (min-width:$scr5) {
+            @content;
+        }
+    }
+    
+ 
+}
+
+
+
+
+//================================================================================= 
+// Font faces all goes here
+//=================================================================================  
+@font-face {
+    font-family: font;
+    src: url(../fonts/custom/font-regular.ttf);
+}
+
+@font-face {
+    font-family: font-italic;
+    src: url(../fonts/custom/font-Italic.ttf);
+}
+
+@font-face {
+    font-family: font-thin;
+    src: url(../fonts/custom/font-light.ttf);
+}
+
+@font-face {
+    font-family: font-medium;
+    src: url(../fonts/custom/font-medium.ttf);
+}
+
+@font-face {
+    font-family: font-bold;
+    src: url(../fonts/custom/font-semibold.ttf);
+}
+
+@font-face {
+    font-family: font-bolder;
+    src: url(../fonts/custom/font-bold.ttf);
+}
+
+@font-face {
+    font-family: quote;
+    src: url(../fonts/custom/quote.ttf);
+}
+
+
+.font {
+    font-family: font;
+}
+
+.font-quote {
+    font-family: quote;
+}
+
+.font-italic {
+    font-family: font-italic;
+}
+
+.font-thin {
+    font-family: font-thin;
+}
+
+.font-medium {
+    font-family: font-medium;
+}
+
+.font-bold {
+    font-family: font-bold;
+}
+
+.font-bolder {
+    font-family: font-bolder;
+}
+
+//================================================================================= 
+// Some resetings
+//================================================================================= 
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover {}
+.form-control {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    &:hover,
+    &:active,
+    &:focus {
+        outline: 0px !important;
+        -webkit-appearance: none;
+    }
+}
+
+div,
+section {
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #2980b9;
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color:#3498db; 
+    }
+}
+
+
+.reset-form {
+    outline: none;
+    border: 0px;
+    outline-style: none;
+    webkit-appearance: none;
+    box-shadow: none;
+    border-radius: 0px;
+    // border-bottom: 2px solid rgba($text, 0.1);
+    &:active,
+    &:focus,
+    &:hover {
+        @include box-shadow(none);
+        webkit-appearance: none;
+        //   border-bottom: 2px solid rgba($col2, 1);
+    }
+}
+
+body {
+    font-family: font;
+    font-size: 16px;
+    background:white;
+}
+
+
+
+//================================================================================= 
+// Debugging and development helper classes
+//================================================================================= 
+.border {
+    border: 1px dashed orange;
+}
+.no-border
+{
+    border:0px;
+}
+.no-padding {
+    padding: 0px;
+}
+
+.no-margin {
+    margin: 0px;
+}
+
+.no-mrg-pad {
+    margin: 0px;
+    padding: 0px;
+}
+
+.width100 {
+    width: 100%;
+}
+
+
+//================================================================================= 
+// Some othe widgets
+//================================================================================= 
+$scrollW: 8px;
+.scroll::-webkit-scrollbar-track {
+    background: none;
+    border-radius: $scrollW;
+}
+.scroll::-webkit-scrollbar {
+    width: $scrollW;
+    background: none;
+}
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: $scrollW;
+    background-color: rgba(105, 105, 105, 0.22);
+}
+.stick-bottom {
+    position: absolute;
+}

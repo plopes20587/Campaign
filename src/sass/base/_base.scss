@@ -1,0 +1,23 @@
+@import "../layout/_media";
+@import "_mixins";
+@import "_variables";
+
+body
+{
+	background: url(../img/bg.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+header{
+}
+
+main{
+}
+
+footer{
+}
+
+li {
+	text-decoration: none;
+	list-style: none;
+}

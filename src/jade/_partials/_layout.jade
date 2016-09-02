@@ -1,0 +1,14 @@
+include _meta.jade
+include _includes.jade
+
+
+doctype html
+html
+	head
+		title Robert Downey Jr
+		+meta
+		+includes()
+	body
+		block content
+		include _footer.jade
+		include _scripts.jade

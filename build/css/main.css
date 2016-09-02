@@ -1,0 +1,186 @@
+/* 
+    File: media.scss
+    Last Modified:22 April, 2016
+    www.pakvistatech.com
+*/
+@-webkit-viewport {
+  width: device-width;
+  scale: 1.0; }
+
+@-moz-viewport {
+  width: device-width;
+  scale: 1.0; }
+
+@-o-viewport {
+  width: device-width;
+  scale: 1.0; }
+
+@-ms-viewport {
+  width: device-width;
+  scale: 1.0; }
+
+@viewport {
+  width: device-width;
+  scale: 1.0; }
+
+html, body {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  text-size-adjust: 100%; }
+
+@font-face {
+  font-family: font;
+  src: url(../fonts/custom/font-regular.ttf); }
+
+@font-face {
+  font-family: font-italic;
+  src: url(../fonts/custom/font-Italic.ttf); }
+
+@font-face {
+  font-family: font-thin;
+  src: url(../fonts/custom/font-light.ttf); }
+
+@font-face {
+  font-family: font-medium;
+  src: url(../fonts/custom/font-medium.ttf); }
+
+@font-face {
+  font-family: font-bold;
+  src: url(../fonts/custom/font-semibold.ttf); }
+
+@font-face {
+  font-family: font-bolder;
+  src: url(../fonts/custom/font-bold.ttf); }
+
+@font-face {
+  font-family: quote;
+  src: url(../fonts/custom/quote.ttf); }
+
+.font {
+  font-family: font; }
+
+.font-quote {
+  font-family: quote; }
+
+.font-italic {
+  font-family: font-italic; }
+
+.font-thin {
+  font-family: font-thin; }
+
+.font-medium {
+  font-family: font-medium; }
+
+.font-bold {
+  font-family: font-bold; }
+
+.font-bolder {
+  font-family: font-bolder; }
+
+.form-control {
+  outline: 0px !important;
+  -webkit-appearance: none; }
+  .form-control:hover, .form-control:active, .form-control:focus {
+    outline: 0px !important;
+    -webkit-appearance: none; }
+
+div,
+section {
+  box-sizing: border-box; }
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #2980b9; }
+  a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #3498db; }
+
+.reset-form {
+  outline: none;
+  border: 0px;
+  outline-style: none;
+  webkit-appearance: none;
+  box-shadow: none;
+  border-radius: 0px; }
+  .reset-form:active, .reset-form:focus, .reset-form:hover {
+    -ms-box-shadow: none;
+    /* IE 9 */
+    -webkit-box-shadow: none;
+    /* Chrome, Safari, Opera */
+    -moz-box-shadow: none;
+    /* Firefox */
+    -o-box-shadow: none;
+    box-shadow: none;
+    webkit-appearance: none; }
+
+body {
+  font-family: font;
+  font-size: 16px;
+  background: white; }
+
+.border {
+  border: 1px dashed orange; }
+
+.no-border {
+  border: 0px; }
+
+.no-padding {
+  padding: 0px; }
+
+.no-margin {
+  margin: 0px; }
+
+.no-mrg-pad {
+  margin: 0px;
+  padding: 0px; }
+
+.width100 {
+  width: 100%; }
+
+.scroll::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 8px; }
+
+.scroll::-webkit-scrollbar {
+  width: 8px;
+  background: none; }
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(105, 105, 105, 0.22); }
+
+.stick-bottom {
+  position: absolute; }
+
+/* 
+    File: media.scss
+    Last Modified:22 April, 2016
+    www.pakvistatech.com
+*/
+.btn {
+  -ms-border-radius: 20px;
+  /* IE 9 */
+  -webkit-border-radius: 20px;
+  /* Chrome, Safari, Opera */
+  -moz-border-radius: 20px;
+  /* Firefox */
+  -o-border-radius: 20px;
+  border-radius: 20px; }
+
+.btn-primary {
+  background: #1e3565; }
+
+body {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+li {
+  text-decoration: none;
+  list-style: none; }
+
+body {
+  background-color: grey; }
