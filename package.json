@@ -17,6 +17,8 @@
     "gulp-sass": "^2.3.2"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "modernizr": "^3.3.1",
     "normalize": "^0.3.1"
   }
 }
