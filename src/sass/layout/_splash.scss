@@ -31,9 +31,12 @@
     &__image {
       max-width: 100%;
     }
+    &__wrapper {
+        width: 600px;
+        margin: 0 auto;
+    }
 
     &__form {
-      max-width: 700px;
       display: flex;
       margin: 0 auto;
       padding: 1.75em;
@@ -70,10 +73,6 @@
         -ms-flex-preferred-size: 42%;
       }
 
-      @media (max-width:1024px) {
-        max-width: 600px;
-      }
-
       @media(max-width: 306px) {
         .zip, .btn {
           flex-basis: 100%;
@@ -91,11 +90,51 @@
       width: 100%;
       border-radius: 0;
       padding-top: .75em;
-      margin-bottom: 1.25em;
+      margin-bottom: 1em;
       color: white;
 
       @include onLG {
         font-size: 3em;
       }
     }
+
+    &__link {
+      font-size: 4em;
+      float: right;
+      text-decoration: underline;
+
+      a {
+        color: white;
+      }
+    }
+}
+
+@media (max-width: 736px) {
+  .splash {
+    background-image: none;
+    &__content {
+      top: auto;
+      margin-top: auto;
+      padding: 0;
+    }
+    &__wrapper {
+      width: 100%;
+    }
+    &__form {
+      margin: 0;
+      max-width: 100%;
+    }
+    &__title {
+      padding-top: 0;
+    }
+    &__link {
+      float: left;
+      margin-left: 20px;
+      font-size: 3.25em;
+      margin-top: .5em;
+      a {
+        color: #444;
+      }
+    }
+  }
 }
