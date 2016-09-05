@@ -2,7 +2,9 @@ var gulp        = require('gulp');
     browserSync = require('browser-sync');
     sass        = require('gulp-sass');
     jade        = require('gulp-pug');
-    prettify   = require('gulp-prettify');
+    prettify    = require('gulp-prettify');
+    cssmin      = require('gulp-cssmin');
+    rename      = require('gulp-rename');
     reload      = browserSync.reload;
 
 
@@ -24,12 +26,20 @@ gulp.task('jade-watch', ['templates'], reload);
 gulp.task('sass', function() {
     return gulp.src('./src/sass/*.scss')
         .pipe(sass())
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./build/css'))
         .pipe(reload({
             stream: true
         }));
 });
 
+/*gulp.task('css', function () {
+    gulp.src('./build/css/*.css')
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('./build/css'));
+});*/
 
 // Serve and watch jade/sass
 

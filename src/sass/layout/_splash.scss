@@ -34,6 +34,7 @@
     &__wrapper {
         width: 600px;
         margin: 0 auto;
+        float: right;
     }
 
     &__form {
@@ -123,6 +124,7 @@
     &__form {
       margin: 0;
       max-width: 100%;
+      animation: none;
     }
     &__title {
       padding-top: 0;
