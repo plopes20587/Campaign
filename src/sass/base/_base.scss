@@ -5,6 +5,7 @@
 body, html {
 	height: 100%;
 }
+
 body
 {
 	margin: 0;
@@ -12,15 +13,6 @@ body
 	background: white;
 	font-size: 100%;
 	width: 100%;
-}
-
-header{
-}
-
-main{
-}
-
-footer{
 }
 
 li {
@@ -42,7 +34,15 @@ section {
 	color: white;
 	width: 120px;
 	height: 50px;
+
+	&:hover {
+		color: $button;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid $button;
+	}
 }
+
 .clearfix {
 	display: inline-block;
 
@@ -53,5 +53,21 @@ section {
 		content: " ";
 		clear: both;
 		height: 0;
+	}
+}
+
+input[type="text"],
+input[type="email"] {
+	padding: 10px 20px;
+	border: 1px solid #999;
+	border-radius: 3px;
+	display: block;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	outline: none;
+	height: 50px;
+
+	&:focus {
+    border-color: #FF6F00;
 	}
 }
