@@ -11,7 +11,7 @@
     <script src="js/browser-check.js" type="application/javascript"></script>
     <!-- vendor css links-->
     <link href="vendor/css/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="vendor/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="vendor/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- uncomment the following if css3 animation is required-->
     <!-- link(href="vendor/css/animate.min.css", rel="stylesheet", type="text/css")-->
@@ -32,10 +32,16 @@
         <img class="logo" src="img/logo.png">
       </div>
     </header>
-    <main class="splash__content">
-      <div class="splash__wrapper">
-        <div class="splash__image"></div>
-      </div>
+    <main class="splash__content col-sm-12 clearix">
+      <div class="splash__image"></div>
+      <section class="splash__main">
+        <form class="splash__form">
+          <h1 class="splash__title">American Needs a Hero</h1>
+          <input class="email" type="email" name="email" placeholder="email">
+          <input class="zip" type="text" name="zip" placeholder="zip code">
+          <input class="btn" type="submit" value="submit" name="submit-btn">
+        </form>
+      </section>
     </main>
     <script src="js/main.js" type="application/javascript"></script>
   </body>

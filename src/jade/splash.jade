@@ -4,7 +4,11 @@ block content
   header.splash__header
     div.container.splash__logo
       img.logo(src="img/logo.png")
-  main.splash__content
-    div.splash__wrapper
-      div.splash__image
-    
+  main.splash__content.col-sm-12.clearix
+    div.splash__image
+    section.splash__main
+        form.splash__form
+          h1.splash__title American Needs a Hero
+          input(type="email" name="email" placeholder="email" class="email")
+          input(type="text" name="zip" placeholder="zip code" class="zip")
+          input(type="submit" class="btn" value="submit" name="submit-btn")

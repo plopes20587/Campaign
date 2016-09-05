@@ -27,3 +27,31 @@ li {
 	text-decoration: none;
 	list-style: none;
 }
+
+section {
+	border-radius: 0;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 1.2em 0 2.4em;
+}
+
+.btn{
+	@include border-radius($rad);
+  background: $button;
+	color: white;
+	width: 120px;
+	height: 50px;
+}
+.clearfix {
+	display: inline-block;
+
+	&:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+}
