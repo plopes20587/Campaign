@@ -1,8 +1,10 @@
 @import "../layout/_media";
 @import "_mixins";
 @import "_variables";
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro);
 
 body, html {
+	font-family: 'Source Sans Pro', sans-serif;
 	height: 100%;
 }
 
@@ -18,6 +20,11 @@ body
 li {
 	text-decoration: none;
 	list-style: none;
+	font-style: normal;
+	color: #364350;
+	line-height: 1.6;
+	font-size: 1.2rem;
+	margin: 1rem 0;
 }
 
 section {

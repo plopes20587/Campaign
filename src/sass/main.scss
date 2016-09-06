@@ -1,2 +1,50 @@
 @import "base/_base.scss";
 @import "layout/_splash.scss";
+
+
+.main {
+  &__header {
+    display: block;
+    width: 100%;
+    background-color: #C0392B;
+    height: 12em;
+    position: relative;
+    padding: 1em;
+  }
+
+  &__nav {
+    margin: 3rem 2rem 1.5rem 0;
+    float: right;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+
+    &__item {
+      display: inline;
+
+      a {
+        padding: 1em;
+        font-size: 1.75em;
+        color: white;
+      }
+    }
+
+    > .btn {
+      margin-left: .5em;
+      padding: 1em 1em 1em 0;
+      vertical-align: baseline;
+
+      a {
+        vertical-align: middle;
+        padding: 1.45em;
+      }
+    }
+  }
+}
+
+h1 {
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+}
