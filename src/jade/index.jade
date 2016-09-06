@@ -1,7 +1,18 @@
 extends _partials/_layout.jade
 
 block content
-	main.container
-		h1 This is Robert Diwber
+	main.main__content
+		div.main__mask
+			div.main__bg
+				div.splash__wrapper
+					form.splash__form
+						h1.splash__title Contribute Today
+						p.main__blurb Fueled by span YOU. Not partisan special interests.
+						ul.main__list
+							- for (var i = 1; i <= 4; i++) {
+								li 
+									a.btn(href="#") $10
+							- }
 
-	h2 Testing 1
+						a.btn.donate(href="#") Donate									
+							
