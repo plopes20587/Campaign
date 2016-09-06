@@ -91,7 +91,7 @@
 
     .splash__wrapper {
       float: left;
-      max-width: 50%;
+      max-width: 75%;
       position: absolute;
       top: 25%;
       left: 2%;
@@ -140,6 +140,21 @@
         color: $text;
       }
 
+    }
+  }
+}
+
+@media (max-width: 736px) {
+  .main {
+    &__bg {
+      .splash__wrapper {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        left: 0;
+      }
     }
   }
 }
