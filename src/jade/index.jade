@@ -9,10 +9,8 @@ block content
 						h1.splash__title Contribute Today
 						p.main__blurb Fueled by span YOU. Not partisan special interests.
 						ul.main__list
-							- for (var i = 1; i <= 4; i++) {
-								li 
-									a.btn(href="#") $10
-							- }
-
+							for item in ["$10", "$50", "$100", "$500"]
+								li
+									a.btn.currency(href="#")= item															
 						a.btn.donate(href="#") Donate									
 							

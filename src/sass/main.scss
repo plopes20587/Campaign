@@ -51,27 +51,26 @@
       }
     }
 
-    > .btn {
+     &__item--cta {
       margin-left: .5em;
       padding: 1em 1em 1em 0;
-      vertical-align: baseline;
       transition: 200ms ease-in-out;
 
       &:hover {
         box-shadow: 2px 2px 3px 3px rgba(0,0,0,.3);
         border: none;
-      }
-
-      a {
-        vertical-align: middle;
-        padding: 1.45em;
-        color: white;
-
-        &:hover {
+        > a {
           color: $text;
         }
       }
     }
+
+  }
+
+  &__cta {
+    font-size: 1.45em;
+    color: white;
+    line-height: 1.75;
   }
 
   &__content {
@@ -112,6 +111,7 @@
       .btn.donate {
         font-size: 1em;
         line-height: 1.6;
+        margin: .75em 0;
       }
     }
   }
@@ -130,7 +130,7 @@
       padding: .25em;
     }
 
-    .btn {
+    .btn.currency {
       background-color: transparent;
       border: 1px solid white;
       font-size: 1.75em;
