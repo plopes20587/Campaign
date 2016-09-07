@@ -84,14 +84,12 @@
     }
 
     &__title {
-      font-size: 2.25em;
+      font-size: 2.45em;
       height: auto;
       padding-right: .5em;
       text-align: left;
       width: 100%;
       border-radius: 0;
-      padding-top: .75em;
-      margin-bottom: 1em;
       color: white;
 
       @include onLG {
@@ -99,13 +97,24 @@
       }
     }
 
+    &__blurb {
+      color: white;
+      font-weight: 100;
+      margin: 0;
+    }
+
     &__link {
       font-size: 4em;
       float: right;
-      text-decoration: underline;
+      text-decoration: none;
 
       a {
         color: white;
+        font-weight: 100;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
 }
