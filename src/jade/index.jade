@@ -1,16 +1,18 @@
-extends _partials/_layout.jade
+extends _partials/_splash-layout.jade
 
 block content
-	main.main__content
-		div.main__mask
-			div.main__bg
-				div.splash__wrapper
-					form.splash__form
-						h1.splash__title Contribute Today
-						p.main__blurb Fueled by span YOU. Not partisan special interests.
-						ul.main__list
-							for item in ["$10", "$50", "$100", "$500"]
-								li
-									a.btn.currency(href="#")= item															
-						a.btn.donate(href="#") Donate									
-							
+  header.splash__header
+    div.container.splash__logo
+      img.logo(src="img/logo.png")
+  main.splash__content.col-sm-12.clearix
+    div.splash__image
+    section.splash__main
+      div.splash__wrapper
+        form.splash__form
+          h1.splash__title American Needs a Hero
+            hr
+          input(type="email" name="email" placeholder="email" class="email")
+          input(type="text" name="zip" placeholder="zip code" class="zip")
+          input(type="submit" class="btn" value="submit" name="submit-btn")
+        p.splash__link
+          a(href="main.html") Continue to Site

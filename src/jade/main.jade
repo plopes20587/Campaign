@@ -1,0 +1,16 @@
+extends _partials/_layout.jade
+
+block content
+	main.main__content
+		div.main__mask
+			div.main__bg
+				div.splash__wrapper
+					form.splash__form
+						h1.splash__title Contribute Today
+						p.main__blurb Fueled by span YOU. Not partisan special interests.
+						ul.main__list
+							for item in ["$10", "$50", "$100", "$500"]
+								li
+									a.btn.currency(href="#")= item															
+						a.btn.donate(href="#") Donate									
+							
