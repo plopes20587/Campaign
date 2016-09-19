@@ -35,6 +35,11 @@
         width: 600px;
         margin: 0 auto;
         float: right;
+
+        @media (min-width: 768px) {
+          position: absolute;
+          right: 10em;
+        }
     }
 
     &__form {
