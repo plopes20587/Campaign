@@ -19,7 +19,6 @@
     float: left;
     max-width: 25%;
     position: relative;
-    left: 2%;
 
     .logo {
       max-width: 100%;
@@ -32,8 +31,9 @@
   }
 
   &__nav {
-    margin: 3rem 2rem 1.5rem 0;
+    margin: 2em 0;
     float: right;
+    line-height: 0;
   }
 
   &__list {
