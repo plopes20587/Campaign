@@ -90,12 +90,17 @@
     width: 100%;
     height: 100%;
 
+    .container {
+      height: 100%;
+    }
+
     .splash__wrapper {
-      float: left;
       max-width: 75%;
-      position: absolute;
-      top: 20%;
-      left: 2%;
+      position: relative;
+      left: 0;
+      right: auto;
+      top: 100px;
+      float: left;
 
       form {
         padding: .75em;
@@ -147,8 +152,63 @@
 
 .news {
   &__title {
-    text-align: center;
     font-size: 4.15em;
+    text-align: left;
+    width: 100%;
+  }
+
+  &__feed {
+    width: 75%;
+    padding: 20px 0;
+    position: relative;
+  }
+
+  &__wrapper {
+    padding: 20px 0;
+
+    a {
+      color: #333;
+    }
+  }
+
+  &__thumb {
+    width: 25%;
+    float: left;
+    overflow: hidden;
+    height: 140px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__data {
+    width: 75%;
+    float: right;
+    display: initial;
+
+    h2 {
+      display: inline-block;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    span {
+      display: block;
+      padding-left: 20px;
+    }
+  }
+
+  &__source {
+    font-size: 2.25em;
+    color: $primary;
+    font-style: italic;
+    padding: 10px 0;
+  }
+
+  &__date {
+    font-size: 1.65em;
   }
 }
 
@@ -170,6 +230,35 @@
     }
     &__mask {
       overflow: initial;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .news {
+    &__feed {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 625px) {
+  .news {
+    &__thumb {
+      width: 100%;
+      padding-bottom: 20px;
+    }
+
+    &__feed {
+      padding: 0;
+    }
+
+    &__data {
+      width: 100%;
+
+      h2, span {
+        padding-left: 0;
+      }
     }
   }
 }

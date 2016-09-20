@@ -4,15 +4,45 @@ block content
 	main.main__content
 		div.main__mask
 			div.main__bg
-				div.splash__wrapper
-					form.splash__form
-						h1.splash__title Contribute Today
-						p.main__blurb Fueled by YOU. Not partisan special interests.
-						ul.main__list
-							for item in ["$10", "$50", "$100", "$500"]
-								li
-									a.btn.currency(href="#")= item															
-						a.btn.donate(href="#") Donate									
-	section.news
+				div.container
+					div.splash__wrapper
+						form.splash__form
+							h1.splash__title Contribute Today
+							p.main__blurb Fueled by YOU. Not partisan special interests.
+							ul.main__list
+								for item in ["$10", "$50", "$100", "$500"]
+									li
+										a.btn.currency(href="#")= item															
+							a.btn.donate(href="#") Donate									
+	section.news.container
 		div.news__main__content
-			h1.news__title In The Press						
+			h1.news__title Latest News		
+			div.news__feed
+				div.news__wrapper.clearfix
+					a(href="#")
+						div.news__thumb
+							img(src="img/story.jpg")
+						div.news__data
+							h2.news__article__title Robert Downey, Jr. Writes a Memorial Day Message to His Fans
+							span.news__source USA Today
+							span.news__date September 17, 2017
+				div.news__wrapper.clearfix
+					a(href="#")
+						div.news__thumb
+							img(src="img/story2.jpg")
+						div.news__data
+							h2.news__article__title 8 Things you need to know about Robert Downey, Jr.
+							span.news__source Huffington Post
+							span.news__date September 17, 2017
+				div.news__wrapper.clearfix
+					a(href="#")
+						div.news__thumb
+							img(src="img/jumbotron.jpg")
+						div.news__data
+							h2.news__article__title Downey, Jr. Addresses Democratic National Convention
+							span.news__source Times
+							span.news__date September 15, 2017
+
+					
+			
+								
