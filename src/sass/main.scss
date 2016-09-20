@@ -160,13 +160,13 @@
   }
 
   &__feed {
-    width: 75%;
+    width: 100%;
     padding: 20px 0;
     position: relative;
   }
 
   &__wrapper {
-    padding: 20px 0;
+    padding: 30px 0;
 
     a {
       color: #333;
@@ -177,7 +177,7 @@
     width: 25%;
     float: left;
     overflow: hidden;
-    height: 140px;
+    height: 160px;
 
     img {
       width: 100%;
