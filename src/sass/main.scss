@@ -360,3 +360,30 @@
     }
   }
 }
+
+@media (max-width:563px) {
+  .main__bg {
+    .splash {
+      &__wrapper h1 {
+        font-size: 2em;
+      }
+    }
+
+    .main__list {
+      display: block;
+      width: 100%;
+
+      li {
+        float: none;
+
+        a {
+          width: 100%;
+        }
+      }
+    }
+
+    .btn.donate {
+      width: 100%;
+    }
+  }
+}
